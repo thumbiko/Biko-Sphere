@@ -1,0 +1,87 @@
+To switch between branches in Git, use the git checkout or git switch commands. Here’s a guide:
+
+1. List All Branches
+To see a list of all branches in your repository, use:
+
+bash
+Copy code
+git branch
+The current branch will be marked with an asterisk (*).
+
+2. Switch to an Existing Branch
+To switch to an existing branch, use:
+
+bash
+Copy code
+git checkout <branch-name>
+or, alternatively:
+
+bash
+Copy code
+git switch <branch-name>
+Replace <branch-name> with the name of the branch you want to switch to (e.g., main or feature-branch).
+
+3. Create and Switch to a New Branch
+To create a new branch and switch to it immediately, you can use:
+
+bash
+Copy code
+git checkout -b <new-branch-name>
+or:
+
+bash
+Copy code
+git switch -c <new-branch-name>
+This will create <new-branch-name> and switch to it.
+
+4. Commit Changes Before Switching
+If you have uncommitted changes, Git may prompt you to commit or stash them before switching branches. Here are some options:
+
+Commit the changes before switching:
+
+bash
+Copy code
+git add .
+git commit -m "Your commit message"
+Stash the changes to apply them later:
+
+bash
+Copy code
+git stash
+git checkout <branch-name>
+git stash apply
+Let me know if you have more questions about working with branches!
+
+
+
+
+
+
+You said:
+list all branches
+ChatGPT said:
+ChatGPT
+To list all branches in your Git repository, use the following command:
+
+bash
+Copy code
+git branch
+This command will show all local branches in the repository. The current branch will be highlighted with an asterisk (*).
+
+To List Both Local and Remote Branches
+If you want to see both local and remote branches, use:
+
+bash
+Copy code
+git branch -a
+This will list:
+
+Local branches (e.g., main, feature-branch)
+Remote branches (e.g., origin/main, origin/feature-branch)
+To List Only Remote Branches
+If you only want to see branches on the remote (e.g., on GitHub), use:
+
+bash
+Copy code
+git branch -r
+This will display branches that exist only on the remote repository.
